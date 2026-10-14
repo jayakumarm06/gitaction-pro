@@ -1,11 +1,11 @@
 name: "01 - Understanding events"
 
 on:
-    workflow_dispatch:
-    push:
-    pull_request:
-    schedule:
-        - cron: "*/7 * * * *"
+    - workflow_dispatch
+    - push
+    - pull_request
+      # schedule:
+      #     - cron: "*/7 * * * *"
 
 jobs:
     event-info-job:
