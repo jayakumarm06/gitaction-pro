@@ -1,4 +1,4 @@
-name: "01 - Understanding events"
+name: "02 - Understanding events"
 
 on:
     workflow_dispatch:
