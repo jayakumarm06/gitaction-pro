@@ -13,4 +13,4 @@ jobs:
 
         steps:
             - name: Print Trigger Event
-              run: echo "My trigger event is ${{ github.event_name }}"
+              run: echo "My trigger event is ${{ github.event_name }} event"
