@@ -1,0 +1,35 @@
+name: 01 - Production workflow Trigger Demo
+
+on:
+    push:
+        branches:
+            - "develop"
+            - "feature/*"
+
+        paths:
+            - "app/**"
+            - "docker/**"
+            - ".gihub/workflows/**"
+
+    pull_request:
+        types:
+            - opened
+            - synchronize
+            - reopened
+            - closed
+            - ready_for_review
+
+        branches:
+            - "main"
+
+jobs:
+    validation-job:
+        runs_on: ubuntu-latest
+
+        steps:
+            - name: Print Workflow Context
+              run: |
+                  echo "Workflow triggred succesdfully"
+                  echo "Event Type: $GITHUB_EVENT_NAME"
+                  echo "Branch: $GITHUB_REF_NAME"
+                  echo "owner:$GITHUB_REPOSITORY_OWNER"
