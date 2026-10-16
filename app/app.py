@@ -1,1 +1,0 @@
-Print("GHA trigger Demo")
